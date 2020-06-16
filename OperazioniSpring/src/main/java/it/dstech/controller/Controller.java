@@ -13,7 +13,7 @@ import it.dstech.gestione.Verifica;
 public class Controller {
 	
 	@RequestMapping(value  = "/calcolatoreA")
-	public ModelAndView checkParameter(@RequestParam("numero") int numero1, int numero2, Model model) {
+	public ModelAndView checkParameter(@RequestParam("numero1") int numero1,@RequestParam("numero2") int numero2, Model model) {
 		Verifica v = new Verifica();
 		ModelAndView vista = new ModelAndView("risultato");
 		vista.addObject("check", v.addizione(numero1, numero2));
